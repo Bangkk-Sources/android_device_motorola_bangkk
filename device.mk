@@ -56,7 +56,7 @@ PRODUCT_PACKAGES += \
     init.nfc.sec.rc
 
 # LiveDisplay
-$(call soong_config_set,livedisplay_sysfs,enable_af,true)
+$(call soong_config_set_bool,livedisplay_sysfs,enable_af,true)
 
 # NFC
 PRODUCT_PACKAGES += \
