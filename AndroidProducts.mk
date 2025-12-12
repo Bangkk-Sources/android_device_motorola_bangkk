@@ -4,4 +4,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_bangkk.mk
+    $(LOCAL_DIR)/euclid_bangkk.mk

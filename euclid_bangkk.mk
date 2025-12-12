@@ -11,10 +11,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from bangkk device
 $(call inherit-product, device/motorola/bangkk/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Euclid stuff.
+$(call inherit-product, vendor/euclid/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_bangkk
+PRODUCT_NAME := euclid_bangkk
 PRODUCT_DEVICE := bangkk
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
@@ -28,23 +28,25 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=bangkk_g
 
 
-# To include Gapps 
-WITH_GMS := true
-
-# To Build Google(Dailer, Message, Phone) and BCR
-WITH_GMS_COMMS_SUITE := true
-
-# To Add cinematic wallpaer support (only supported in gapps build not in vanilla remove this flag for vanilla builds)
-TARGET_SUPPORTS_WALLEFFECT := true
-
-#Some more GMS Flag
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-
-# To include QuickSwitch
-WITH_QS := true
+EUCLID_MAINTAINER := ARYAN
 
 # Disable/enable blur support, false by default
 TARGET_ENABLE_BLUR := true
 
-#Go Official
-MATRIXX_BUILD_TYPE := Official
+
+#Gapps
+EUCLID_GAPPS := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true  
+TARGET_BUILD_BCR := true (For Basic Call Recorder)
+TARGET_BUILD_DOTGALLERY := true (For Including DotGallery)
+
+#UDFPS
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_HAS_UDFPS := true
+
+#Misc.
+TARGET_SUPPORTS_TOUCHGESTURES := true
+EUCLID_DEVICE := Moto_G84_5G
+EUCLID_PROCESSOR := Snapdragon_695
