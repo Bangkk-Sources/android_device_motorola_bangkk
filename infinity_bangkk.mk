@@ -11,10 +11,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from bangkk device
 $(call inherit-product, device/motorola/bangkk/device.mk)
 
-# Inherit some common Euclid stuff.
-$(call inherit-product, vendor/euclid/config/common_full_phone.mk)
+# Inherit some common Infinity stuff.
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
-PRODUCT_NAME := euclid_bangkk
+PRODUCT_NAME := infinity_bangkk
 PRODUCT_DEVICE := bangkk
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
@@ -27,26 +27,17 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=motorola/bangkk_g/bangkk:15/V1TCS35H.88-16-1/d09472-674756:user/release-keys \
     DeviceProduct=bangkk_g
 
+# Maintainer Name
+INFINITY_MAINTAINER := "ARYAN x Uvaers" (Default: Unknown)
 
-EUCLID_MAINTAINER := ARYAN
+# Whether Including Google Apps
+WITH_GAPPS := false
 
 # Disable/enable blur support, false by default
 TARGET_ENABLE_BLUR := true
 
-
-#Gapps
-EUCLID_GAPPS := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_INCLUDE_STOCK_ARCORE := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true  
 TARGET_BUILD_BCR := true (For Basic Call Recorder)
-TARGET_BUILD_DOTGALLERY := true (For Including DotGallery)
 
 #UDFPS
 EXTRA_UDFPS_ANIMATIONS := true
 TARGET_HAS_UDFPS := true
-
-#Misc.
-TARGET_SUPPORTS_TOUCHGESTURES := true
-EUCLID_DEVICE := Moto_G84_5G
-EUCLID_PROCESSOR := Snapdragon_695

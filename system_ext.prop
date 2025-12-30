@@ -1,2 +1,9 @@
 # Display
 sys.brightness.disable_gamma_conversion=true
+
+#PRODUCT_SYSTEM_PROPERTIES
+ro.product.marketname=Moto G84
+ro.infinity.soc=Snapdragon 695
+ro.infinity.camera=50MP + 8MP
+ro.infinity.battery=5000 mAh
+ro.infinity.display=1080p, 120 Hz
