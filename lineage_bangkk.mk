@@ -23,28 +23,14 @@ PRODUCT_MODEL := moto g84 5G
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="bangkk_g-user 15 V1TCS35H.88-16-1 d09472-674756 release-keys MV-301" \
-    BuildFingerprint=motorola/bangkk_g/bangkk:15/V1TCS35H.88-16-1/d09472-674756:user/release-keys \
+    BuildDesc="bangkk_g-user 15 V1TC35H.88-16 c3b1cd-0e8d4 release-keys MV-301" \
+    BuildFingerprint=motorola/bangkk_g/bangkk:15/V1TC35H.88-16/c3b1cd-0e8d4:user/release-keys \
     DeviceProduct=bangkk_g
 
-
-# To include Gapps 
-WITH_GMS := true
-
-# To Build Google(Dailer, Message, Phone) and BCR
-WITH_GMS_COMMS_SUITE := true
-
-# To Add cinematic wallpaer support (only supported in gapps build not in vanilla remove this flag for vanilla builds)
-TARGET_SUPPORTS_WALLEFFECT := true
-
-#Some more GMS Flag
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-
-# To include QuickSwitch
-WITH_QS := true
-
-# Disable/enable blur support, false by default
+#Lunaris Build Flags
 TARGET_ENABLE_BLUR := true
-
-#Go Official
-MATRIXX_BUILD_TYPE := Official
+WITH_GMS := false
+TARGET_USES_CORE_GAPPS := false
+TARGET_CUSTOM_UDFPS := true
+TARGET_OPTIMIZED_DEXOPT := true
+TARGET_BOOT_ANIMATION_RES := 1080

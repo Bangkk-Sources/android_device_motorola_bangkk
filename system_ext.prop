@@ -1,2 +1,6 @@
 # Display
 sys.brightness.disable_gamma_conversion=true
+
+
+#Maitainer Name
+ro.paranoid.maintainer=aryan x uvaers
