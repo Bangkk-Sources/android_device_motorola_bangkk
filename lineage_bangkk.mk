@@ -27,24 +27,14 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=motorola/bangkk_g/bangkk:15/V1TCS35H.88-16-1/d09472-674756:user/release-keys \
     DeviceProduct=bangkk_g
 
-
-# To include Gapps 
-WITH_GMS := true
-
-# To Build Google(Dailer, Message, Phone) and BCR
-WITH_GMS_COMMS_SUITE := true
-
-# To Add cinematic wallpaer support (only supported in gapps build not in vanilla remove this flag for vanilla builds)
-TARGET_SUPPORTS_WALLEFFECT := true
-
-#Some more GMS Flag
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-
-# To include QuickSwitch
-WITH_QS := true
-
-# Disable/enable blur support, false by default
+#Axion Flags
 TARGET_ENABLE_BLUR := true
+# Camera information (multiple sensors supported)
+AXION_CAMERA_REAR_INFO := 50,8
+AXION_CAMERA_FRONT_INFO := 16
 
-#Go Official
-MATRIXX_BUILD_TYPE := Official
+# Maintainer name (underscores become spaces in the UI)
+AXION_MAINTAINER := RomanukhxAryan
+
+# Processor name (underscores become spaces)
+AXION_PROCESSOR := Snapdragon_695
